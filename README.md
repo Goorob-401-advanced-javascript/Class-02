@@ -11,7 +11,8 @@
 - `npm run test`
 #### Tests
 - How do you run tests? `npm run test`
-- Any tests of note? none
-- Describe any tests that you did not complete, skipped, etc
+- Any tests of note? 
+- Describe any tests that you did not complete, skipped, etc 
+i didnt complete all the test for validitor.js 
 #### UML
-[UML]()
+[UML](https://github.com/Goorob-401-advanced-javascript/Class-02/blob/lab2/assests/20200125_142457.jpg)
