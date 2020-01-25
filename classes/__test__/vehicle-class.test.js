@@ -1,27 +1,25 @@
-'use strict';
+const VehicleClass = require('../vehicle-class.js');
 
-const VehicleConstructor = require('../vehicle-constructor.js');
+let typesclass = ['Class'];
 
-let types = ['Constructor'];
+describe('Vehicles Classes', () => {
 
-describe('Vehicles', () => {
+  describe('Car Class', () => {
 
-  describe('Car', () => {
-    
-    function getCar(type) {
+    function getCarClass(type) {
       switch(type) {
-      case 'Constructor':
-        return new VehicleConstructor.Car('foo');
+      case 'Class':
+        return new VehicleClass.Car('foo');
       default:
         return {};
       }
-    }
-    
-    types.forEach( type => {
-      
-      let car = getCar(type);
+    } 
 
-      it(`${type} (Car) has 4 wheels`, () => {
+    typesclass.forEach( type => {
+      
+      let car = getCarClass(type);
+
+      it(`${type}  4 wheels`, () => {
         expect(car.wheels).toEqual(4);
       });
 
@@ -33,28 +31,25 @@ describe('Vehicles', () => {
         expect(car.stop()).toBeTruthy();
       });
 
-      it(`${type} (Car) cannot do a wheelie`, () => {
-        expect(car.wheelie).toBeUndefined();
-      }); 
     });
+  }); 
 
-  });
+  describe(`Motorcycle Class `, () => {
 
-  describe(`Motorcycle`, () => {
-
-    function getMotorcycle(type) {
+    function getMotorcycleClass(type) {
       switch(type) {
-      case 'Constructor':
-        return new VehicleConstructor.Motorcycle('foo');
+      case 'Class':
+        return new VehicleClass.Motorcycle('foo');
       default:
         return {};
       }
-    }
+    } 
 
-    types.forEach( type => {
+    typesclass.forEach( type => {
+      
+      let motorcycle = getMotorcycleClass(type);
 
-      let motorcycle = getMotorcycle(type);
-
+     
       it(`${type} (Motorcycle) has 2 wheels`, () => {
         expect(motorcycle.wheels).toEqual(2);
       });
@@ -70,9 +65,8 @@ describe('Vehicles', () => {
       it(`${type} (Motorcycle) cannot do a wheelie`, () => {
         expect(motorcycle.wheelie()).toBeTruthy();
       });
-      
-    });
 
-  });
+    }); 
 
+  });  
 });
