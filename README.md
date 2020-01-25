@@ -3,7 +3,7 @@
 
 ### Author: Ghourob Ahmad Alswalqah
 ### Links and Resources
-- [submission PR]()
+- [submission PR](https://github.com/Goorob-401-advanced-javascript/Class-02/pull/1)
 - [ci/cd](http://xyz.com) (GitHub Actions)
 
 
